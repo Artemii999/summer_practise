@@ -1,0 +1,37 @@
+.container {
+    height: 90px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(7, 91, 186); /* #0066cc;*/
+    z-index: 3;
+}
+
+.button{
+    border-radius: 3px;
+    background-image: -moz-linear-gradient( 90deg, rgb(228,110,0) 0%, rgb(249,149,56) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(228,110,0) 0%, rgb(249,149,56) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(228,110,0) 0%, rgb(249,149,56) 100%);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.38),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.38);
+    width: 256px;
+    height: 42px;
+    margin-left: auto;
+    z-index: 50;
+}
+
+.name_style{
+        font-size: 21px;
+        font-family: "Arial";
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.143;
+        z-index: 9;   
+}
+
+.dop_name_style{
+        font-size: 12px;
+        font-family: "Arial";
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.25;
+        z-index: 14;   
+}
