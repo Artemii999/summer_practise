@@ -1,11 +1,21 @@
+var fullDateTime = new Date(); 
+var getNormalDate = function(date){ 
+var day = date.getDate();
+if (day<10) day = '0' + day; 
+var month = date.getMonth() + 1;
+if (month<10) month = '0' + month; 
+var year = date.getFullYear(); 
+return day + '.' + month + '.' + year; 
+}; 
+document.getElementById('date_real').value = getNormalDate(fullDateTime);
 
-//if (Day < 10) { Day = "0" + Day }
-
-
-
-//текущая дата
-var Data = new Date();
-console.log(Data.getDate(), '.', Data.getMonth(), '.', Data.getFullYear());
-//создаем новую дату из дня старой прибавляем 1 день
-Data.setDate(Data.getDate() + 1);
-console.log(Data.getDate(), '.', Data.getMonth(), '.', Data.getFullYear())
+var fullDateTime = new Date(); 
+var getNormalDate = function(date){ 
+var day = date.getDate() + 1;
+if (day<10) day = '0' + day; 
+var month = date.getMonth() + 1;
+if (month<10) month = '0' + month; 
+var year = date.getFullYear(); 
+return day + '.' + month + '.' + year; 
+}; 
+document.getElementById('date_tomorrow').value = getNormalDate(fullDateTime);
