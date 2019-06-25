@@ -1,37 +1,198 @@
-.container {
+.container 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     height: 90px;
     width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     background-color: rgb(7, 91, 186); /* #0066cc;*/
-    z-index: 3;
 }
 
-.button{
+.titleContainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 44px;
+    width: 506px; /*367px;*/
+    margin-top: 24px;
+    padding-left: 29px;
+}
+
+.nameStyle
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 21px;
+    font-family: "Arial";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.143;
+    margin-bottom: 4px;
+}
+
+.dopNameStyle
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 12px;
+    font-family: "Arial";
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.25;
+    /* left: 31px;
+    top: 51px;           */
+}
+
+.wrapper
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 24px 32px 0 0;
+    width: 100%;
+}
+
+.datePickerContainer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     border-radius: 3px;
-    background-image: -moz-linear-gradient( 90deg, rgb(228,110,0) 0%, rgb(249,149,56) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb(228,110,0) 0%, rgb(249,149,56) 100%);
-    background-image: -ms-linear-gradient( 90deg, rgb(228,110,0) 0%, rgb(249,149,56) 100%);
+    background-color: rgb(255, 255, 255);
+    width: 256px;
+    height: 42px;
+}
+
+.datePickerContainer:hover
+{
+    cursor: pointer;
+}
+
+.datePickerBlock
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 6px 0 0 12px;
+}
+
+.buttonSearch
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.datePickerTitle
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    font-family: "Verdana";
+}
+
+.datePickerName 
+{
+    font-size: 12px;
+    color: rgb(61, 61, 61);
+    line-height: 1;
+    font-weight: bold; 
+}
+
+.period
+{
+    color: rgba(61, 61, 61, 0.729);
+    line-height: 1.111;
+    font-size: 11px; 
+    padding-left: 4px;     
+}
+
+.textDate 
+{
+  font-size: 13.5px;
+  font-family: "Verdana";
+  color: rgb(7, 91, 186);
+  font-weight: bold;
+  line-height: 0.889;
+  /* left: 12px;
+  top: 17px; */
+}
+
+input[type="button" i] 
+{
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    border-radius: 3px;
+    background-color: rgb(249,149,56);
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.38),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.38);
     width: 256px;
     height: 42px;
     margin-left: auto;
-    z-index: 50;
+    top: 0; 
+    left: 0;
 }
 
-.name_style{
-        font-size: 21px;
-        font-family: "Arial";
-        color: rgb(255, 255, 255);
-        text-transform: uppercase;
-        line-height: 1.143;
-        z-index: 9;   
+input[type="button" i]:hover 
+{
+    background-color: rgb(228,110,0);
+    cursor: pointer;
 }
 
-.dop_name_style{
-        font-size: 12px;
-        font-family: "Arial";
-        color: rgba(255, 255, 255, 0.8);
-        line-height: 1.25;
-        z-index: 14;   
+
+.text_button
+{
+    font-size: 15px;
+    font-family: "Arial";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;      
+}
+  
+input 
+{
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 1px;
+    border-width: 0;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    cursor: pointer;
+}
+
+.icon
+{
+    background-image: url(../imag/ic-check-in-date.png);
+    background-position: 7px 7px;
+    background-repeat: no-repeat; 
+    width: 42px;
+    opacity: 0.8;
+}
+
+.icon:hover
+{
+    opacity: 1;
+}
+
+.icon_revers
+{
+    transform: scale(-1, 1);
+}
+
+.commit
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 9.6px;
+    font-family: "Arial";
+    color: rgba(255, 255, 255, 0.502);
+    line-height: 0.938;
+    margin: 5px 0 0 110px;
 }

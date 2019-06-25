@@ -3,32 +3,58 @@
   <head>
     <meta charset="utf-8">
 
-    <title></title>
+    <title>Task1</title>
 
 
     <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
-
-  <div class="container">
-    <div class="name">
-      <h1 class="name_style">БРОНИРОВАНИЕ НОМЕРОВ</h1>
+    <div class="container">
+        <div class="titleContainer">
+            <div class="nameStyle">
+                <a>Бронирование номеров</a>
+            </div>
+            <div class="dopNameStyle">
+                <a>Получите гарантированное заселение ПРЯМО СЕЙЧАС!</a>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="datePickerContainer">
+                <div class="datePickerBlock">
+                        <div class="datePickerTitle">
+                            <div class="datePickerName">
+                                <a>Заезд</a>
+                            </div>
+                            <div class="day"></div>
+                        </div>
+                        <div class="datePicker">
+                            <input readonly type="text" class="textDate" value="25.06.2019">
+                        </div>
+                </div>
+                <div class="icon"></div>   
+            </div>
+            <div class="datePickerContainer">
+                <div class="datePickerBlock">
+                        <div class="datePickerTitle">
+                            <div class="datePickerName">
+                                <a>Выезд</a>
+                            </div>
+                            <div class="period">
+                                <a>(1 ночь)</a>
+                            </div>
+                        </div>
+                        <div class="datePicker">
+                            <input readonly type="text" class="textDate" value="26.06.2019">
+                        </div>
+                </div>
+                <div class="icon icon_revers"></div>  
+            </div>
+            <div class="buttonSearch">
+                <input type="button" class="text_button" value="Найти номер">
+                <div class="commit">Система онлайн-бранирования></div>
+            </div>
+        </div>
     </div>
-    <div class="dop_name">
-      <h2 class="dop_name_style">Получите гарантированное заселение ПРЯМО СЕЙЧАС!</h2>
-    </div>
-    <div class="arrival">
-      
-    </div>
-    <div class="departure">
-      
-    </div>
-    <div class="button">
-        <input type="button" class="text_button" value="Найти номер">
-    </div>
-
-  </div>
-
     <script type="text/javascript" src="src/input.js"></script>
   </body>
 </html>
