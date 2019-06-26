@@ -24,9 +24,6 @@
 
 .nameStyle
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     font-size: 21px;
     text-transform: uppercase;
     line-height: 1.143;
@@ -35,9 +32,6 @@
 
 .dopNameStyle
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     font-size: 12px;
     opacity: 0.8;
     line-height: 1.25;
@@ -126,7 +120,7 @@ input[type="button" i]
     border: 0;
     border-radius: 3px;
     background-color: rgb(249,149,56);
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.38),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.38);
+    box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.38),inset 0 1px 0 0 rgba(255, 255, 255, 0.38);
     width: 256px;
     height: 42px;
     margin-left: auto;
@@ -139,7 +133,7 @@ input[type="button" i]:hover
 }
 
 
-.text_button
+.textButton
 {
     font-size: 15px;
     font-family: "Arial";
@@ -154,7 +148,6 @@ input
     -webkit-appearance: textfield;
     background-color: white;
     -webkit-rtl-ordering: logical;
-    cursor: text;
     padding: 1px;
     border-width: 0;
     border-style: inset;
@@ -162,18 +155,17 @@ input
     border-image: initial;
     cursor: pointer;
     width: 90px;
+    outline:none;
 }
 
 .icon
 {
-    background-image: url(../imag/ic-check-in-date.png);
-    background-position: 7px 7px;
-    background-repeat: no-repeat; 
+    background: url(../imag/ic-check-in-date.png)  no-repeat 7px 7px;
     width: 42px;
     opacity: 0.73;
 }
 
-.icon_revers
+.iconRevers
 {
     transform: scale(-1, 1);
 }
