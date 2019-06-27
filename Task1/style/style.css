@@ -62,7 +62,7 @@
     cursor: pointer;
 }
 
-.datePickerContainer:hover .icon
+.datePickerContainer:hover .icon::after
 {
     opacity: 1;
 }
@@ -149,14 +149,17 @@ input
     outline:none;
 }
 
-.icon
+.icon::after
 {
-    background: url(../imag/ic-check-in-date.png)  no-repeat 7px 7px;
-    width: 42px;
+    content: url(../imag/ic-check-in-date.png);
+    width: 24px;
     opacity: 0.73;
+    position: relative;
+    left: 210px;
+    bottom: 30px;
 }
 
-.iconRevers
+.iconRevers::after
 {
     transform: scale(-1, 1);
 }
