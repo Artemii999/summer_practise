@@ -54,6 +54,7 @@
     background-color: rgb(255, 255, 255);
     width: 256px;
     height: 42px;
+    margin-right: 38px;
 }
 
 .datePickerContainer:hover
@@ -72,13 +73,6 @@
     flex-direction: column;
     justify-content: start;
     padding: 6px 0 0 12px;
-}
-
-.buttonSearch
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
 }
 
 .datePickerTitle
@@ -139,18 +133,6 @@ input[type="button" i]:hover
     text-transform: uppercase;
     line-height: 1.2;      
 }
-
-.buttonSearch::after {
-    content: "Система онлайн-бронирования";
-    position: absolute;
-    right: 30px; 
-    top: 73px;
-    font-size: 9.6px;
-    font-family: "Arial";
-    color: rgba(255, 255, 255, 0.502) !important;
-    line-height: 0.938;
-    cursor: default;
-}
   
 input 
 {
@@ -181,11 +163,13 @@ input
 
 .commit
 {
-    display: flex;
-    flex-direction: column;
+    content: "Система онлайн-бронирования";
+    position: absolute;
+    right: 30px; 
+    top: 73px;
     font-size: 9.6px;
     font-family: "Arial";
-    color: rgba(255, 255, 255, 0.502);
+    color: rgba(255, 255, 255, 0.502) !important;
     line-height: 0.938;
-    margin: 5px 0 0 110px;
+    cursor: default;
 }
