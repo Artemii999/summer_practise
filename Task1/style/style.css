@@ -89,7 +89,8 @@ body
 
 .iconBox
 {
-    
+   margin-left: auto;
+   padding-right: 10px; 
 }
 
 .datePickerContainer:hover
@@ -101,14 +102,6 @@ body
 {
     opacity: 1;
 }
-
-/* .datePickerBlock
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    padding: 6px 0 0 12px;
-} */
 
 .datePickerTitle
 {
@@ -200,11 +193,6 @@ input
     top: 8px;
 }
 
-.iconRevers::after
-{
-    transform: scale(-1, 1);
-}
-
 .commit
 {
     content: "Система онлайн-бронирования";
@@ -216,6 +204,14 @@ input
     color: rgba(255, 255, 255, 0.502) !important;
     line-height: 0.938;
     cursor: default;
+    width: 141px;
+}
+
+.iconBox.iconRevers
+{
+    transform: scale(-1, 1);
+    padding-left: 10px; 
+    padding-right: 0; 
 }
 
 @media screen and (max-width: 1199px)
@@ -223,10 +219,6 @@ input
     .datePickerContainer
     {
         width: 176px;
-    }
-
-    input[type="button" i]
-    {
     }
 } 
 
@@ -237,6 +229,7 @@ input
     {
         width: 18px;
         height: 20px;
+        top: 5px;
     }
     .container
     {
@@ -296,6 +289,8 @@ input
     .commit 
     {
         top: 168px;
+        left: 50%;
+        margin-left: -70.5px;
     }
 
     .dop
@@ -406,6 +401,10 @@ input
         margin-left: -16px;
         top: 2px;
     }
+    .iconBox.iconRevers
+    {
+        padding-left: 25px;
+    }
 }
 
 @media screen and (max-width: 205px)
@@ -415,10 +414,28 @@ input
         top: 228px;
     }
 }
+@media screen and (max-width: 199px)
+{
+    .iconBox.iconRevers
+    {
+        margin: 0 0 0 -7px;
+    }
+}
 @media screen and (max-width: 196px)
 {
     .commit
     {
         top: 241px;
+    }
+    .iconBox.iconRevers
+    {
+        margin: 0 0 0 -10px;
+    }
+}
+@media screen and (max-width: 188px)
+{
+    .iconBox.iconRevers
+    {
+        margin: 0 0 0 -15px;
     }
 }
