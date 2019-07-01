@@ -14,11 +14,11 @@ body
 .container
 {
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
     align-items: stretch;
     justify-content: flex-start;
-    /*position: absolute;*/
     max-width: 1140px;
+    flex: 0 1 1140px;
     background-color: rgb(7, 91, 186); 
     cursor: default;
     padding: 24px 30px;
@@ -27,10 +27,10 @@ body
 .titleContainer
 {
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     justify-content: flex-start;
-    max-height: 44px;
-    min-width: 335px; /*367px;506*/
+    flex: 0 0 auto;
+    padding: 0 18px 0 0;
     font-family: "Arial";
     color: rgb(255, 255, 255);
 }
@@ -53,23 +53,43 @@ body
 .wrapper
 {
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
     justify-content: space-between;
-    width: 100%;
+    flex: 1 1 auto;
+}
+
+.datePickerBlock
+{
+    display: flex;
+    flex-flow: row;
+    flex: 1 1 auto;
 }
 
 .datePickerContainer
 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-flow: row;
+    justify-content: start;
     border-radius: 3px;
     background-color: rgb(255, 255, 255);
-    max-width: 256px;
-    min-width: 176px;
+    flex: 0 1 256px;
     max-height: 42px;
     margin-right: 18px;
     width: 100%;
+}
+
+.datePickerBox
+{
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    border-radius: 3px;
+    flex: 0 1 auto;
+}
+
+.iconBox
+{
+    
 }
 
 .datePickerContainer:hover
@@ -82,24 +102,26 @@ body
     opacity: 1;
 }
 
-.datePickerBlock
+/* .datePickerBlock
 {
     display: flex;
     flex-direction: column;
     justify-content: start;
     padding: 6px 0 0 12px;
-}
+} */
 
 .datePickerTitle
 {
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
     justify-content: start;
     font-family: "Verdana";
     font-size: 12px;
     color: rgb(61, 61, 61);
     line-height: 1;
-    font-weight: bold; 
+    font-weight: bolder;
+    padding: 6px 0 0 12px;
+    width: 102px; 
 }
 
 .period
@@ -117,6 +139,10 @@ body
   color: rgb(7, 91, 186);
   font-weight: bold;
   line-height: 0.889;
+  width: 102px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 3px;
 }
 
 input[type="button" i] 
@@ -127,10 +153,7 @@ input[type="button" i]
     border-radius: 3px;
     background-color: rgb(249,149,56);
     box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.38),inset 0 1px 0 0 rgba(255, 255, 255, 0.38);
-    max-width: 256px;
-    min-width: 176px;
-    max-height: 42px;
-    width: 100%;
+    flex: 0 1 256px;
 }
 
 input[type="button" i]:hover 
@@ -145,7 +168,6 @@ input[type="button" i]:hover
     font-size: 15px;
     font-family: "Arial";
     color: rgb(255, 255, 255);
-    max-width: 256px;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.2;      
@@ -156,24 +178,26 @@ input
     -webkit-appearance: textfield;
     background-color: white;
     -webkit-rtl-ordering: logical;
-    padding: 1px;
     border-width: 0;
     border-style: inset;
     border-color: initial;
     border-image: initial;
     cursor: pointer;
-    max-width: 90px;
+    flex: 0 1 90px;
     outline:none;
+    padding: 1px 1px 1px 12px;
+
 }
 
 .icon::after
 {
     content: url(../imag/ic-check-in-date.png);
     width: 24px;
+    height: 26px;
     opacity: 0.73;
     position: relative;
-    left: 210px;
-    bottom: 30px;
+    left: 0;
+    top: 8px;
 }
 
 .iconRevers::after
@@ -194,15 +218,207 @@ input
     cursor: default;
 }
 
-/* @media screen and (max-width: 1199px)
+@media screen and (max-width: 1199px)
 {
     .datePickerContainer
     {
-        max-width: 176px;
+        width: 176px;
     }
 
     input[type="button" i]
     {
-        max-width: 176px;
     }
-} */
+} 
+
+@media screen and (max-width: 959px)
+{
+    
+    .icon::after
+    {
+        width: 18px;
+        height: 20px;
+    }
+    .container
+    {
+        flex-flow: column;
+    }
+
+    .commit
+    {
+        top: 121px;
+    }
+
+    .titleContainer
+    {
+        padding: 0 0 10px 0;
+    }
+
+    .datePickerContainer
+    {
+        width: 136px;
+        margin-right: 12px;
+        flex: 0 1 292px;
+        max-height: 36px;
+    }
+
+    input[type="button" i]
+    {
+        flex: 0 1 292px;
+        max-height: 36px;
+    }
+    .textDate 
+    {
+        font-size: 12px;
+    }
+    .textButton
+    {
+        font-size: 13.5px;
+    }
+    .datePickerTitle
+    {
+        padding: 6px 0 0 10px;
+    }
+}
+
+@media screen and (max-width: 497px)
+{
+    .wrapper
+    {
+        flex-flow: column;
+    }
+
+    input[type="button" i] 
+    {
+        flex: 0 1 436px;
+        margin-top: 12px;
+    }
+
+    .commit 
+    {
+        top: 168px;
+    }
+
+    .dop
+    {
+        margin-right: 0; 
+    }
+}
+
+@media screen and (max-width: 377px)
+{
+    .commit 
+    {
+        top: 183px;
+    }
+}
+
+@media screen and (max-width: 347px)
+{
+    .datePickerContainer
+    {
+        flex: 0 1 297px;
+        margin-right: 0;
+        width: 100%;
+    }
+    .datePickerBlock
+    {
+        flex-flow: column;
+    }
+    .nameStyle
+    {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .dop
+    { 
+        margin-top: 12px;
+    }
+    .commit 
+    {
+        top: 223px;
+    }
+}
+@media screen and (max-width: 269px)
+{
+    .commit
+    {
+        top: 240px;
+    }
+}
+
+@media screen and (max-width: 222px)
+{
+    .commit
+    {
+        top: 255px;
+    }
+}
+
+@media screen and (max-width: 212px)
+{
+    .commit
+    {
+        top: 270px;
+    }
+}
+
+@media screen and (max-width: 209px)
+{
+    .commit
+    {
+        top: 215px;
+    }
+    .datePickerContainer
+    {
+        max-height: 30px;
+    }
+
+    input[type="button" i]
+    {
+        max-height: 30px;
+    }
+    .nameStyle
+    {
+        font-size: 13.5px;
+    }
+    .dopNameStyle
+    {
+        font-size: 10.8px;
+    }
+    .textDate 
+    {
+        font-size: 10.8px;
+        padding: 0 0 0 8px;
+        max-height: 12px;
+    }
+    .textButton
+    {
+        font-size: 12px;
+    }
+    .datePickerTitle
+    {
+        font-size: 10.8px;
+        padding: 2px 0 0 8px;
+        font-weight: normal;
+    }
+    .icon::after
+    {
+        margin-left: -16px;
+        top: 2px;
+    }
+}
+
+@media screen and (max-width: 205px)
+{
+    .commit
+    {
+        top: 228px;
+    }
+}
+@media screen and (max-width: 196px)
+{
+    .commit
+    {
+        top: 241px;
+    }
+}

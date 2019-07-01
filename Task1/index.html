@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width">
 
     <title>Task1</title>
 
@@ -18,26 +18,28 @@
             </div>
         </div>
         <div class="wrapper">
-            <div class="datePickerContainer">
-                <div class="datePickerBlock icon">
-                    <div class="datePickerTitle">
-                        Заезд
-                    </div>
-                    <input readonly type="text" class="textDate" id="date_real">
-                </div>
-                <!-- <div class="icon"></div>    -->
-            </div>
-            <div class="datePickerContainer">
-                <div class="datePickerBlock icon iconRevers">
-                    <div class="datePickerTitle">
-                        Выезд
-                        <div class="period">
-                            (1 ночь)
+            <div class="datePickerBlock">
+                <div class="datePickerContainer">
+                    <div class="datePickerBox">
+                        <div class="datePickerTitle">
+                            Заезд
                         </div>
+                        <input readonly type="text" class="textDate" id="date_real">
                     </div>
-                    <input readonly type="text" class="textDate" id="date_tomorrow">
+                    <div class="iconBox icon"></div>
                 </div>
-                <!-- <div class="icon iconRevers"></div>   -->
+                <div class="datePickerContainer dop">
+                    <div class="datePickerBox">
+                        <div class="datePickerTitle">
+                            Выезд
+                            <div class="period">
+                                (1 ночь)
+                            </div>
+                        </div>
+                        <input readonly type="text" class="textDate" id="date_tomorrow">
+                    </div>
+                    <div class="iconBox icon iconRevers"></div>
+                </div>
             </div>
             <input type="button" class="textButton" value="Найти номер">
             <div class="commit">Система онлайн-бронирования</div>
