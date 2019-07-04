@@ -11,6 +11,14 @@ body
     height: 100%;
 }
 
+.box
+{
+    display: flex;
+    flex-flow: column;
+    max-height: 0;
+    max-width: 1200px;
+}
+
 .container
 {
     display: flex;
@@ -22,6 +30,19 @@ body
     background-color: rgb(7, 91, 186); 
     cursor: default;
     padding: 24px 30px;
+}
+
+.box::after
+{
+    content: "Система онлайн-бронирования";
+    margin-left: auto;
+    font-size: 9.6px;
+    font-family: "Arial";
+    color: rgba(255, 255, 255, 0.502) !important;
+    line-height: 0.938;
+    position: relative;
+    bottom: 17px;
+    padding-right: 30px;
 }
 
 .titleContainer
@@ -98,7 +119,7 @@ body
     cursor: pointer;
 }
 
-.datePickerContainer:hover .icon::after
+.datePickerContainer:hover::after 
 {
     opacity: 1;
 }
@@ -182,15 +203,13 @@ input
 
 }
 
-.icon::after
+.datePickerContainer::after
 {
     content: url(../imag/ic-check-in-date.png);
-    width: 24px;
-    height: 26px;
+    margin-left: auto;
+    margin-top: 8px;
     opacity: 0.73;
-    position: relative;
-    left: 0;
-    top: 8px;
+    padding-right: 10px;
 }
 
 .commit
@@ -207,11 +226,11 @@ input
     width: 141px;
 }
 
-.iconBox.iconRevers
+.dop::after
 {
     transform: scale(-1, 1);
-    padding-left: 10px; 
-    padding-right: 0; 
+    padding-left: 10px;
+    padding-right: 0;
 }
 
 @media screen and (max-width: 1199px)
@@ -224,13 +243,6 @@ input
 
 @media screen and (max-width: 959px)
 {
-    
-    .icon::after
-    {
-        width: 18px;
-        height: 20px;
-        top: 5px;
-    }
     .container
     {
         flex-flow: column;
@@ -271,10 +283,20 @@ input
     {
         padding: 6px 0 0 10px;
     }
+    .datePickerContainer::after
+    {
+        margin-top: 6px;
+    }
 }
 
 @media screen and (max-width: 497px)
 {
+    .box::after
+    {
+        margin-right: auto;
+        padding-right: 0;
+    }
+
     .wrapper
     {
         flex-flow: column;
@@ -292,23 +314,14 @@ input
         left: 50%;
         margin-left: -70.5px;
     }
-
-    .dop
-    {
-        margin-right: 0; 
-    }
-}
-
-@media screen and (max-width: 377px)
-{
-    .commit 
-    {
-        top: 183px;
-    }
 }
 
 @media screen and (max-width: 347px)
 {
+    .container 
+    {
+        padding: 24px 25px;
+    }
     .datePickerContainer
     {
         flex: 0 1 297px;
@@ -333,32 +346,13 @@ input
         top: 223px;
     }
 }
-@media screen and (max-width: 269px)
-{
-    .commit
-    {
-        top: 240px;
-    }
-}
-
-@media screen and (max-width: 222px)
-{
-    .commit
-    {
-        top: 255px;
-    }
-}
-
-@media screen and (max-width: 212px)
-{
-    .commit
-    {
-        top: 270px;
-    }
-}
 
 @media screen and (max-width: 209px)
 {
+    .container 
+    {
+        padding: 24px 20px;
+    }
     .commit
     {
         top: 215px;
@@ -396,46 +390,8 @@ input
         padding: 2px 0 0 8px;
         font-weight: normal;
     }
-    .icon::after
+    .datePickerContainer::after
     {
-        margin-left: -16px;
-        top: 2px;
-    }
-    .iconBox.iconRevers
-    {
-        padding-left: 25px;
-    }
-}
-
-@media screen and (max-width: 205px)
-{
-    .commit
-    {
-        top: 228px;
-    }
-}
-@media screen and (max-width: 199px)
-{
-    .iconBox.iconRevers
-    {
-        margin: 0 0 0 -7px;
-    }
-}
-@media screen and (max-width: 196px)
-{
-    .commit
-    {
-        top: 241px;
-    }
-    .iconBox.iconRevers
-    {
-        margin: 0 0 0 -10px;
-    }
-}
-@media screen and (max-width: 188px)
-{
-    .iconBox.iconRevers
-    {
-        margin: 0 0 0 -15px;
+        margin-top: 2px;
     }
 }

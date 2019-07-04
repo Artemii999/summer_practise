@@ -8,41 +8,41 @@
     <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
-    <div class="container">
-        <div class="titleContainer">
-            <div class="nameStyle">
-                Бронирование номеров
-            </div>
-            <div class="dopNameStyle">
-                Получите гарантированное заселение ПРЯМО СЕЙЧАС!
-            </div>
-        </div>
-        <div class="wrapper">
-            <div class="datePickerBlock">
-                <div class="datePickerContainer">
-                    <div class="datePickerBox">
-                        <div class="datePickerTitle">
-                            Заезд
-                        </div>
-                        <input readonly type="text" class="textDate" id="date_real">
-                    </div>
-                    <div class="iconBox icon"></div>
+    <div class="box">
+        <div class="container">
+            <div class="titleContainer">
+                <div class="nameStyle">
+                    Бронирование номеров
                 </div>
-                <div class="datePickerContainer dop">
-                    <div class="datePickerBox">
-                        <div class="datePickerTitle">
-                            Выезд
-                            <div class="period">
-                                (1 ночь)
+                <div class="dopNameStyle">
+                    Получите гарантированное заселение ПРЯМО СЕЙЧАС!
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="datePickerBlock">
+                    <div class="datePickerContainer">
+                        <div class="datePickerBox">
+                            <div class="datePickerTitle">
+                                Заезд
                             </div>
+                            <input readonly type="text" class="textDate" id="date_real">
                         </div>
-                        <input readonly type="text" class="textDate" id="date_tomorrow">
                     </div>
-                    <div class="iconBox icon iconRevers"></div>
+                    <div class="datePickerContainer dop">
+                        <div class="datePickerBox">
+                            <div class="datePickerTitle">
+                                Выезд
+                                <div class="period">
+                                    (1 ночь)
+                                </div>
+                            </div>
+                            <input readonly type="text" class="textDate" id="date_tomorrow">
+                        </div>
+                    </div>
                 </div>
+                <input type="button" class="textButton" value="Найти номер">
+                <!-- <div class="commit">Система онлайн-бронирования</div> -->
             </div>
-            <input type="button" class="textButton" value="Найти номер">
-            <div class="commit">Система онлайн-бронирования</div>
         </div>
     </div>
     <script type="text/javascript" src="src/input.js"></script>
