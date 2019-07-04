@@ -12,3 +12,23 @@ const getDate = (date) => {
 
 document.getElementById('date_real').value = getDate(fullDateTime);
 document.getElementById('date_tomorrow').value = getDate(tomorrowDateTime);
+
+
+const hide_show = () =>
+{
+    let close = document.getElementById("close").style.display;
+    let open = document.getElementById("open").innerHTML;
+
+    if(close=="")close="none";
+
+    if(close=="none")
+    {
+        close="block";
+    }
+    else
+    {
+        close="none";
+    }
+    document.getElementById("close").style.display=close;
+    document.getElementById("open").innerHTML=open;
+};

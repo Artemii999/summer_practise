@@ -6,6 +6,7 @@
     <title>Task1</title>
 
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style+.css">
   </head>
   <body>
     <div class="box">
@@ -20,7 +21,7 @@
             </div>
             <div class="wrapper">
                 <div class="datePickerBlock">
-                    <div class="datePickerContainer">
+                    <div class="datePickerContainer" id="open" onClick="hide_show();">
                         <div class="datePickerBox">
                             <div class="datePickerTitle">
                                 Заезд
@@ -28,7 +29,7 @@
                             <input readonly type="text" class="textDate" id="date_real">
                         </div>
                     </div>
-                    <div class="datePickerContainer dop">
+                    <div class="datePickerContainer dop" onClick="hide_show();">
                         <div class="datePickerBox">
                             <div class="datePickerTitle">
                                 Выезд
@@ -42,6 +43,159 @@
                 </div>
                 <input type="button" class="textButton" value="Найти номер">
                 <!-- <div class="commit">Система онлайн-бронирования</div> -->
+            </div>
+        </div>
+    </div>
+    <div class="datepickerBox" href="open" id="close">
+        <div class="datepicker readonly">
+            <div class="datepickerName">Выберите дату заезда</div>
+            <div class="datepickerBody">
+                    <div class="calendar">
+                        <div class="calendarTitle">
+                            <!-- <input class="shiftMonth"> -->
+                            <div class="month">Июль 2019</div>
+                        </div>
+                        <div class="calendarContainer">
+                                <div class="week" readonly>
+                                    <input class="numberWeek" readonly value="Пн">
+                                    <input class="numberWeek" readonly value="Вт">
+                                    <input class="numberWeek" readonly value="Ср">
+                                    <input class="numberWeek" readonly value="Чт">
+                                    <input class="numberWeek" readonly value="Пт">
+                                    <input class="numberWeek" readonly value="Сб">
+                                    <input class="numberWeek" readonly value="Вс">
+                                </div>
+                            <div class="day" onClick="hide_show();">
+                                <div class="streetDay">
+                                    <input class="numberDay" readonly type="text" value="1">
+                                    <input class="numberDay" readonly type="text" value="2">
+                                    <input class="numberDay" readonly type="text" value="3">
+                                    <input class="numberDay" readonly type="text" value="4">
+                                    <input class="numberDay" readonly type="text" value="5">
+                                    <input class="numberDay" readonly type="text" value="6">
+                                    <input class="numberDay" readonly type="text" value="7">
+                                </div>
+                                <div class="streetDay">
+                                    <input class="numberDay" readonly type="text" value="8">
+                                    <input class="numberDay" readonly type="text" value="9">
+                                    <input class="numberDay" readonly type="text" value="10">
+                                    <input class="numberDay" readonly type="text" value="11">
+                                    <input class="numberDay" readonly type="text" value="12">
+                                    <input class="numberDay" readonly type="text" value="13">
+                                    <input class="numberDay" readonly type="text" value="14">
+                                </div>
+                                <div class="streetDay">
+                                    <input class="numberDay" readonly type="text" value="15">
+                                    <input class="numberDay" readonly type="text" value="16">
+                                    <input class="numberDay" readonly type="text" value="17">
+                                    <input class="numberDay" readonly type="text" value="18">
+                                    <input class="numberDay" readonly type="text" value="19">
+                                    <input class="numberDay" readonly type="text" value="20">
+                                    <input class="numberDay" readonly type="text" value="21">
+                                </div>
+                                <div class="streetDay">
+                                    <input class="numberDay" readonly type="text" value="22">
+                                    <input class="numberDay" readonly type="text" value="23">
+                                    <input class="numberDay" readonly type="text" value="24">
+                                    <input class="numberDay" readonly type="text" value="25">
+                                    <input class="numberDay" readonly type="text" value="26">
+                                    <input class="numberDay" readonly type="text" value="27">
+                                    <input class="numberDay" readonly type="text" value="28">
+                                </div>
+                                <div class="streetDay">
+                                    <input class="numberDay" readonly type="text" value="29">
+                                    <input class="numberDay" readonly type="text" value="30">
+                                    <input class="numberDay" readonly type="text" value="31">
+                                    <input class="numberDay" readonly type="text" value="">
+                                    <input class="numberDay" readonly type="text" value="">
+                                    <input class="numberDay" readonly type="text" value="">
+                                    <input class="numberDay" readonly type="text" value="">
+                                </div>
+                                <div class="streetDay">
+                                    <input class="numberDay" readonly type="text" value="">
+                                    <input class="numberDay" readonly type="text" value="">
+                                    <input class="numberDay" readonly type="text" value="">
+                                    <input class="numberDay" readonly type="text" value="">
+                                    <input class="numberDay" readonly type="text" value="">
+                                    <input class="numberDay" readonly type="text" value="">
+                                    <input class="numberDay" readonly type="text" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="calendar">
+                    <div class="calendarTitle">
+                        <!-- <input class="shiftMonth"> -->
+                        <div class="nextMonth month">Август 2019</div>
+                    </div>
+                    <div class="calendarContainer">
+                            <div class="week">
+                                <input class="numberWeek" readonly value="Пн">
+                                <input class="numberWeek" readonly value="Вт">
+                                <input class="numberWeek" readonly value="Ср">
+                                <input class="numberWeek" readonly value="Чт">
+                                <input class="numberWeek" readonly value="Пт">
+                                <input class="numberWeek" readonly value="Сб">
+                                <input class="numberWeek" readonly value="Вс">
+                            </div>
+                        <div class="day" onClick="hide_show();">
+                            <div class="streetDay">
+                                <input class="numberDay" readonly type="text" value="">
+                                <input class="numberDay" readonly type="text" value="">
+                                <input class="numberDay" readonly type="text" value="">
+                                <input class="numberDay" readonly type="text" value="1">
+                                <input class="numberDay" readonly type="text" value="2">
+                                <input class="numberDay" readonly type="text" value="3">
+                                <input class="numberDay" readonly type="text" value="4">
+                            </div>
+                            <div class="streetDay">
+                                <input class="numberDay" readonly type="text" value="5">
+                                <input class="numberDay" readonly type="text" value="6">
+                                <input class="numberDay" readonly type="text" value="7">
+                                <input class="numberDay" readonly type="text" value="8">
+                                <input class="numberDay" readonly type="text" value="9">
+                                <input class="numberDay" readonly type="text" value="10">
+                                <input class="numberDay" readonly type="text" value="11">
+                            </div>
+                            <div class="streetDay">
+                                <input class="numberDay" readonly type="text" value="12">
+                                <input class="numberDay" readonly type="text" value="13">
+                                <input class="numberDay" readonly type="text" value="14">
+                                <input class="numberDay" readonly type="text" value="15">
+                                <input class="numberDay" readonly type="text" value="16">
+                                <input class="numberDay" readonly type="text" value="17">
+                                <input class="numberDay" readonly type="text" value="18">
+                            </div>
+                            <div class="streetDay">
+                                <input class="numberDay" readonly type="text" value="19">
+                                <input class="numberDay" readonly type="text" value="20">
+                                <input class="numberDay" readonly type="text" value="21">
+                                <input class="numberDay" readonly type="text" value="22">
+                                <input class="numberDay" readonly type="text" value="23">
+                                <input class="numberDay" readonly type="text" value="24">
+                                <input class="numberDay" readonly type="text" value="25">
+                            </div>
+                            <div class="streetDay">
+                                <input class="numberDay" readonly type="text" value="26">
+                                <input class="numberDay" readonly type="text" value="27">
+                                <input class="numberDay" readonly type="text" value="28">
+                                <input class="numberDay" readonly type="text" value="29">
+                                <input class="numberDay" readonly type="text" value="30">
+                                <input class="numberDay" readonly type="text" value="31">
+                                <input class="numberDay" readonly type="text" value="">
+                            </div>
+                            <div class="streetDay">
+                                <input class="numberDay" readonly type="text" value="">
+                                <input class="numberDay" readonly type="text" value="">
+                                <input class="numberDay" readonly type="text" value="">
+                                <input class="numberDay" readonly type="text" value="">
+                                <input class="numberDay" readonly type="text" value="">
+                                <input class="numberDay" readonly type="text" value="">
+                                <input class="numberDay" readonly type="text" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
