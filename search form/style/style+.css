@@ -70,17 +70,16 @@
     margin-bottom: 1px;
 }
 
-/* .shiftMonth
+.shiftMonth::before
 {
     opacity: .24;
     color: rgb(7, 91, 186);
-    content: url(../imag/arrow.png)
-} */
-
-.month::before
-{
     content: url(../imag/arrow.png);
-    opacity: .24;
+    padding-left: 7px;
+}
+.shiftMonth
+{
+    padding-top: 10px;
 }
 
 .month
@@ -92,7 +91,7 @@
     font-size: 18px;
     margin: auto;
 }
-.month::after
+.shiftMonth::after
 {
     content: url(../imag/arrow2.png);
     opacity: 0;
@@ -100,6 +99,8 @@
 .nextMonth::after
 {
     opacity: 1;
+    padding-left: 0;
+    padding-right: 7px;
 }
 .nextMonth::before
 {
@@ -112,6 +113,11 @@
     flex-flow: column;
     align-items: stretch;
     justify-content: flex-start;
+}
+
+.none
+{
+    opacity: 0;
 }
 
 .week
