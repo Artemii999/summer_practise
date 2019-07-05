@@ -17,7 +17,6 @@ document.getElementById('date_tomorrow').value = getDate(tomorrowDateTime);
 const hide_show = () =>
 {
     let close = document.getElementById("close").style.display;
-    let open = document.getElementById("open").innerHTML;
 
     if(close=="")close="none";
 
@@ -30,5 +29,16 @@ const hide_show = () =>
         close="none";
     }
     document.getElementById("close").style.display=close;
-    document.getElementById("open").innerHTML=open;
 };
+
+// whatIsDay.onclick = (date) => 
+// {
+//     const val = document.getElementById('whatIsDay').value;
+//     let itDay = val;
+//     if (itDay<10) itDay = '0' + itDay;
+//     let month = date.getMonth() + 1;
+//     if (month<10) month = '0' + month; 
+//     let year = date.getFullYear(); 
+//     document.getElementById('date_real').value = itDay + '.' + month + '.' + year;
+// };
+
